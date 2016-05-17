@@ -1,0 +1,38 @@
+HOME PAGE:	
+
+		+ Bandeau contenant la citation du jour, tiré au sort dans la base de donnée, et afficher lors de chaque connexion.
+
+		+ Formulaire de recherche contenant une zone de saisie de texte, permettant à l'utilisateur de trouver une citation en y inserant :
+	      
+			-un mot-clé exemple lincoln, einstein.
+
+		+ Liste de selection parmi les auteurs present dans le base.
+
+			- la liste sera contruite dynamiquement en interogeant la base de donnée.
+
+		+ Liste de selection permetant de choisir le siècle des citations.
+
+			- DU XVI au XXI.
+
+		+ Bouton radio permettant de trier les résultats par autheurs ou par siècle.
+
+		+ Lien vers la page d'insertion de nouvelles citations.
+
+LA PAGE D'AFFICHAGE DES RÉSULTATS:
+
+		+ Affichage du résultat de l'utilisateur.
+
+		+ Lien vers la page d'acceuil
+
+		+ Lien vers la page d'insertion
+
+LA PAGE D'INSERTION
+
+		+ Formulaire contenant deux zones de saisie de texte pour le nom et le prénom de l'autheur.
+
+		+ Liste de selection du siècle.
+
+		+ Zone de saisie multiligne pour la citation.
+
+		+ Boutons effacement et envoi.
+
