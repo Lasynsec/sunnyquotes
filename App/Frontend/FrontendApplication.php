@@ -18,7 +18,7 @@ class FrontendApplication extends Application
 		$controller->execute(); // On l'execute.
 
 		$this->httpResponse->setPage($controller->page()); // Assignation de la page à la réponse.
-		$this->httpResponse->send(); // On envoie laréponse.
+		$this->httpResponse->send(); // On envoie la réponse.
 	}
 }
 

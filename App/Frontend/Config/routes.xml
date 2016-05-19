@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <routes>
-  <route url="/quotes.html" module="Quotes" action="index" ></route>
-  <route url="/quotes-(.+)-([0-9]+)\.html" module="Quotes" action="show" vars="slug,id" />
+  <route url="/" module="Quotes" action="index" ></route>
+  <route url="/show.html" module="Quotes" action="show"/>
+  <route url="/insert.html" module="Quotes" action="insert"/>
 </routes>

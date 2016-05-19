@@ -30,7 +30,7 @@ class HTTPResponse extends ApplicationComponent
 	*/
 	public function redirect404()
 	{
-		$this->page = new Page($this->app); // On creer une instance de la page.
+		$this->page = new Page($this->app); // On creer une instance de la page avec en paramètre le nom de l'application.
 		$this->page->setContentFile(__DIR__.'/../../Errors/404.html'); // On assigne la vue.
 
 		$this->addHeader('HTTP/1.0 404 Not Found'); // Erreur 404, document non trouvé.

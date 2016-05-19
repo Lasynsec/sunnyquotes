@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>
-      <?= isset($title) ? $title : 'Sunny Quotes' ?>
+      <?= isset($title) ? $title : 'My SunnyQuotes' ?>
     </title>
     <meta http-equiv="Content-Type"  content="text/hml" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -15,32 +15,32 @@
   </head>
   
   <body>
-    <div id="wrap">
-      <header>
-        <h1><a href="/">Mon super site</a></h1>
-        <p>Comment ça, il n'y a presque rien ?</p>
-      </header>
       
-      <nav>
-        <ul>
-          <li><a href="/">Accueil</a></li>
-          <?php if ($user->isAuthenticated()) { ?>
-          <li><a href="/admin/">Admin</a></li>
-          <li><a href="/admin/news-insert.html">Ajouter une news</a></li>
-          <?php } ?>
-        </ul>
-      </nav>
-      
-      <div id="content-wrap">
-        <section id="main">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">My SunnyQuotes</a>
+
+            <ul class="nav navbar-nav">
+              <li><a href="/">Accueil</a></li>
+             <?php if ($user->isAuthenticated()) { ?>
+              <li><a href="/admin/">Admin</a></li>
+              <li><a href="/admin/news-insert.html">Add new quotes</a></li>
+            <?php } ?>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+      <div class="jumbotron">
+         <div class="container">
           <?php if ($user->hasFlash()) echo '<p style="text-align: center;">', $user->getFlash(), '</p>'; ?>
           
           <?= $content ?>
-        </section>
+            </div>
       </div>
     
       <footer></footer>
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </body>
 </html>

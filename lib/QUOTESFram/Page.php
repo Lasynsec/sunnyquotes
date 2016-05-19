@@ -37,7 +37,7 @@ class Page extends ApplicationComponent
 			throw new \RuntimeException('La vue spécifiée n\'existe pas');
 		}
 
-		$user = $this->app->user(); // On initialise le user.
+		$user = $this->app->user(); // On initialise la variable user.
 
 		extract($this->vars);
 
@@ -46,7 +46,7 @@ class Page extends ApplicationComponent
 		$content = ob_get_clean();
 
 		ob_start();
-			require __DIR__.'/../../App/'.$this->app->name().'/Templates/layout'; // On recupère le layout.
+			require __DIR__.'/../../App/'.$this->app->name().'/Templates/layout.php'; // On recupère le layout.
 	}
 
 	/**
