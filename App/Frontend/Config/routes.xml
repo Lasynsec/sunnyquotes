@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <routes>
   <route url="/" module="Quotes" action="index" ></route>
-  <route url="/show.html" module="Quotes" action="show"/>
-  <route url="/insert.html" module="Quotes" action="insert"/>
+  <route url="/show.html" module="Quotes" action="show"></route>
+  <route url="/insert.html" module="Quotes" action="insert"></route>
+  <route url="/test.html" module="Quotes" action="test"></route>
 </routes>

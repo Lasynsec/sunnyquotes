@@ -1,5 +1,5 @@
 <?php
-namespace OCFram;
+namespace QUOTESFram;
 
 abstract class Entity implements \ArrayAccess
 {
@@ -75,7 +75,7 @@ abstract class Entity implements \ArrayAccess
 	{
 		$method = 'set'.ucfirst($var);
 
-		if(isset($this->$var) && is_callable([$this, $method]) 
+		if(isset($this->$var) && is_callable([$this, $method]))
 		{
 			$this->$method($value);
 		}

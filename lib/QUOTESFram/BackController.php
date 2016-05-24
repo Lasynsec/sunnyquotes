@@ -1,5 +1,5 @@
 <?php
-namespace OCFram;
+namespace QUOTESFram;
 
 /*
 * Execute une action ici (méthode);

@@ -22,7 +22,7 @@ class Page extends ApplicationComponent
 			throw new \InvaldArgumentExcpetion('Le nom de la varibla doit être une chaine de caractère non nulle');
 		}
 
-		$this->$vars[$var] = $value;
+		$this->vars[$var] = $value;
 	}
 
 	/**
