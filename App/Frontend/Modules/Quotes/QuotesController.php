@@ -3,6 +3,7 @@ namespace App\Frontend\Modules\Quotes;
 
 use \QUOTESFram\BackController;
 use \QUOTESFram\HTTPRequest;
+use \Entity\Author;
 
 class QuotesController extends BackController
 {
@@ -22,11 +23,24 @@ class QuotesController extends BackController
 	public function executeTest(HTTPRequest $request)
 	{
        // Let's the Quote Entity.
-		$manager = $this->managers->getManagerOf('Quote');
-       // Let's get all quotes in a array
-		$listQuotes = $manager->getList();
+		//$quotes = $this->managers->getManagerOf('Quote')->getListOf($author);
+		$quotes = $this->managers->getManagerOf('Quotes')->getList();
+       
+
+        // echo'<pre>';
+        // 	print_r($quotes);
+        // echo'</pre>';
+        
+     
+		$author = $this->managers->getManagerOf('Authors')->getUnique($quotes[0]->author());
+        //authors = $this->managers->getManagerOf('Authors')->getList();
+  
+		//print_r($quotes);
+		//echo $quotes['author'];
+		//$authorId = $quotes->author();
        
        // Add the new variable in Template.
-       $this->page->addVar('listQuotes', $listQuotes);    
+       $this->page->addVar('quotes', $quotes);
+       $this->page->addVar('author', $author);
  	}
 }

@@ -59,26 +59,26 @@ class Author extends Entity
 	/*
 	* Conversion décimal en chiffre romain.
 	*/ 
-	public function toRomanus($num)
-	{
-		  //I V X  L  C   D   M
-		  //1 5 10 50 100 500 1k
-		  $rome =array("","I","II","III","IV","V","VI","VII","VIII","IX");
-		  $rome2=array("","X","XX","XXX","XL","L","LX","LXX","LXXX","XC");
-		  $rome3=array("","C","CC","CCC","CD","D","DC","DCC","DCCC","CM");
-		  $rome4=array("","M","MM","MMM","IVM","VM","VIM","VIIM","VIIIM","IXM");
-		  $str=$rome[$num%10];
-		  $num-=($num%10);
-		  $num/=10;
-		  $str=$rome2[$num%10].$str;
-		  $num-=($num%10);
-		  $num/=10;
-		  $str=$rome3[$num%10].$str;
-		  $num-=($num%10);
-		  $num/=10;
-		  $str=$rome4[$num%10].$str;
-		  return $str;
-	}
+	// public function toRomanus($num)
+	// {
+	// 	  //I V X  L  C   D   M
+	// 	  //1 5 10 50 100 500 1k
+	// 	  $rome =array("","I","II","III","IV","V","VI","VII","VIII","IX");
+	// 	  $rome2=array("","X","XX","XXX","XL","L","LX","LXX","LXXX","XC");
+	// 	  $rome3=array("","C","CC","CCC","CD","D","DC","DCC","DCCC","CM");
+	// 	  $rome4=array("","M","MM","MMM","IVM","VM","VIM","VIIM","VIIIM","IXM");
+	// 	  $str=$rome[$num%10];
+	// 	  $num-=($num%10);
+	// 	  $num/=10;
+	// 	  $str=$rome2[$num%10].$str;
+	// 	  $num-=($num%10);
+	// 	  $num/=10;
+	// 	  $str=$rome3[$num%10].$str;
+	// 	  $num-=($num%10);
+	// 	  $num/=10;
+	// 	  $str=$rome4[$num%10].$str;
+	// 	  return $str;
+	// }
  
 	//echo chif_rome(152);.
 	// Retourne CLII.
